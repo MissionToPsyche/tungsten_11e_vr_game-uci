@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Anchor
   - PickHead
+  - Meteor
+  - Right Hand
+  - Left Hand
   layers:
   - Default
   - TransparentFX
