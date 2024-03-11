@@ -25,10 +25,7 @@ public class RockController : MonoBehaviour
             thisCollider.transform.parent = null;
             Rigidbody rb = thisCollider.gameObject.AddComponent<Rigidbody>();
             rb.AddForce(collision.impulse, ForceMode.Impulse);
-            // Demo purposes
-            rb.useGravity = false;
             thisCollider.gameObject.AddComponent<XRGrabInteractable>();
-            
         }
     }
 }
