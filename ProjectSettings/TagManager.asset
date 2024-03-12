@@ -9,6 +9,7 @@ TagManager:
   - Meteor
   - Right Hand
   - Left Hand
+  - Rock Piece
   layers:
   - Default
   - TransparentFX
