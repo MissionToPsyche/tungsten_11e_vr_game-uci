@@ -23,8 +23,7 @@ public class RockController : MonoBehaviour
             audioSource.Play();
 
             thisCollider.transform.parent = null;
-            Rigidbody rb = thisCollider.gameObject.AddComponent<Rigidbody>();
-            rb.AddForce(collision.impulse, ForceMode.Impulse);
+            thisCollider.gameObject.AddComponent<Rigidbody>();
             thisCollider.gameObject.AddComponent<XRGrabInteractable>();
         }
     }
