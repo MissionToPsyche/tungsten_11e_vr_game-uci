@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ToggleButton : MonoBehaviour
 {
-    public GameObject menu; // Reference to the menu GameObject
+    public GameObject menu;
 
-    private bool menuVisible = false; // Current visibility state of the menu
+    void Start()
+    {
 
-    // Function to toggle the visibility of the menu
+        menu.SetActive(false);
+    }
+
     public void ToggleMenuVisibility()
     {
-        menuVisible = !menuVisible;
-        menu.SetActive(menuVisible);
-    }
-}
 
+        menu.SetActive(!menu.activeSelf);
+    }
+
+}
