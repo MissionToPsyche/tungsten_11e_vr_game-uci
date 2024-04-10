@@ -82,9 +82,7 @@ public class Outline : MonoBehaviour {
   private Material outlineFillMaterial;
 
   private bool needsUpdate;
-  //Jacob's Code
-  private bool grabbed;
-
+  
   void Awake() {
 
     // Cache renderers
@@ -103,8 +101,7 @@ public class Outline : MonoBehaviour {
     // Apply material properties immediately
     needsUpdate = true;
 
-    //Jacob's Code
-    grabbed = true;
+
   }
 
   void OnEnable() {
@@ -142,12 +139,6 @@ public class Outline : MonoBehaviour {
       needsUpdate = false;
 
       UpdateMaterialProperties();
-    }
-
-    //Jacob's Code
-    if (grabbed){
-        OnDisable();
-        grabbed = false;
     }
     }
 
