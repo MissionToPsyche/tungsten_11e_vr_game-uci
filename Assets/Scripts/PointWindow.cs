@@ -12,12 +12,16 @@ public class PointWindow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Point.SetText(text + point_value);
+        //Point.SetText(text + point_value);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (1 == 1)
+        {
+            point_value++;
+            Point.SetText(text + point_value);
+        }
     }
 }
