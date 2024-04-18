@@ -23,7 +23,9 @@ public class Scanner : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.parent.TransformDirection(Vector3.forward), out hit, 10))
         {
             vertexPos[1] = hit.point;
-            screen.SetText(hit.transform.name);
+            RockPieceControler rpc = hit.transform.GetComponent<RockPieceControler>();
+            if (rpc) screen.SetText(rpc.rockType.typeName);
+            else screen.SetText("Invalid Target");
         }
         else {
             screen.SetText("Scanned Nothing :c");

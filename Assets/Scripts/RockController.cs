@@ -9,11 +9,11 @@ public class RockController : MonoBehaviour
     public List<RockPieceControler> basePieces;
     public List<RockPieceControler> targetPieces;
     // testing purposes
-    public RockType rt;
+    public List<RockType> rt;
 
     public void Start()
     {
-        PopulateTargetPiece(new List<RockType>() { rt });
+        PopulateTargetPiece(rt);
     }
 
     public void PopulateTargetPiece(List<RockType> rockTypes) {

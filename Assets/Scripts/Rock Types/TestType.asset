@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeName: Test
   material: {fileID: 2100000, guid: e71e300104ed4924fa88bc330d300842, type: 2}
+  pointValue: 10

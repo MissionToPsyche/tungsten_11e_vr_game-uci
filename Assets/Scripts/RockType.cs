@@ -7,4 +7,5 @@ public class RockType : ScriptableObject
 {
     public string typeName;
     public Material material;
+    public int pointValue;
 }
