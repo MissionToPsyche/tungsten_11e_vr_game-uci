@@ -8,27 +8,7 @@ public class RockController : MonoBehaviour
 {
     public List<RockPieceControler> basePieces;
     public List<RockPieceControler> targetPieces;
-    // testing purposes
-    public List<RockType> rt;
 
-    public void Start()
-    {
-        PopulateTargetPiece(rt);
-    }
-
-    public void PopulateTargetPiece(List<RockType> rockTypes) {
-        if (rockTypes.Count == 0) {
-            Debug.LogError("Rock Type List parameter is empty!");
-            return;
-        }
-
-        int i = 0;
-        foreach (RockPieceControler rpc in targetPieces) {
-            rpc.SetRockType(rockTypes[i % rockTypes.Count]);
-            i++;
-        }
-    }
-    
     private void OnCollisionEnter(Collision collision)
     {
         Collider thisCollider = collision.GetContact(0).thisCollider;
