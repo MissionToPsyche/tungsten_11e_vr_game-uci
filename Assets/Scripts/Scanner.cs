@@ -24,7 +24,7 @@ public class Scanner : MonoBehaviour
         {
             vertexPos[1] = hit.point;
             RockPieceControler rpc = hit.transform.GetComponent<RockPieceControler>();
-            if (rpc) screen.SetText(rpc.rockType.typeName);
+            if (rpc && rpc.rockType) screen.SetText(rpc.rockType.typeName);
             else screen.SetText("Invalid Target");
         }
         else {
