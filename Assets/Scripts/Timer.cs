@@ -23,9 +23,9 @@ public class Timer : MonoBehaviour
         {
             time_remaining.SetText("3:00");
         }
-        else if (time >= 121f)
+        else if (time >= 120f )
         {
-            if (time2 < 10)
+            if (time2 < 10f)
             {
                 time_remaining.SetText("2:0" + time2.ToString("F0"));
             }
@@ -35,9 +35,9 @@ public class Timer : MonoBehaviour
             }
             time2 -= Time.deltaTime;
         }
-        else if (time >= 61f)
+        else if (time >= 60f )
         {
-            if (time3 < 10)
+            if (time3 < 10f)
             {
                 time_remaining.SetText("1:0" + time3.ToString("F0"));
             }
@@ -49,7 +49,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            if (time4 < 10)
+            if (time4 < 10f)
             {
                 time_remaining.SetText("0" + time4.ToString("F0"));
             }
@@ -60,15 +60,16 @@ public class Timer : MonoBehaviour
             time4 -= Time.deltaTime;
         }
 
-        if (time <= 0.0f)
+        time -= Time.deltaTime;
+
+        if (time == 0f || time < 0f)
         {
-            TimeUp();
+            NextScene();
         }
 
-        time -= Time.deltaTime;
     }
 
-    public void TimeUp()
+    public void NextScene()
     {
         SceneManager.LoadScene("Game Over");
     }
