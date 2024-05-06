@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Scanner : MonoBehaviour
 {
     private LineRenderer lineRenderer;
     public TMP_Text screen;
+    public RawImage image;
     public float maxDistance = 10;
     private void Awake()
     {
@@ -24,13 +26,29 @@ public class Scanner : MonoBehaviour
         {
             vertexPos[1] = hit.point;
             RockPieceControler rpc = hit.transform.GetComponent<RockPieceControler>();
-            if (rpc && rpc.rockType) screen.SetText(rpc.rockType.typeName);
-            else screen.SetText("Invalid Target");
+            if (rpc && rpc.rockType) setRock(rpc.rockType);
+            else setInvalid();
         }
         else {
-            screen.SetText("Scanned Nothing :c");
+            setEmpty();
         }
 
         lineRenderer.SetPositions(vertexPos);
+    }
+
+    void setEmpty() {
+        screen.SetText("Scanned Nothing");
+        image.color = Color.clear;
+    }
+
+    void setRock(RockType rt) {
+        screen.SetText(rt.typeName);
+        image.texture = rt.material.GetTexture("_BaseMap");
+        image.color = Color.white;
+    }
+
+    void setInvalid() {
+        screen.SetText("Invalid Target");
+        image.color = Color.clear;
     }
 }
