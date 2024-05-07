@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     // TODO: Refactor to support multiple deliveries
     public void VerifyDelivery(List<GameObject> objs) {
+        if (deliveries.Count == 0) return;
         // Copy delivery
         foreach (var item in objs)
         {
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
         if (delivery.All(item => item.Value <= 0)) {
             deliveries.RemoveAt(0);
             cdEvent.Invoke(10);
+            GenerateDelivery();
         }
     }
 }

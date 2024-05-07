@@ -43,11 +43,16 @@ public class DeliveryArea : MonoBehaviour
         foreach (Transform child in deliveryPanel.transform) {
             Destroy(child.gameObject);
         }
+        foreach (GameObject obj in touchingPieces) {
+            Destroy(obj);
+        }
+        touchingPieces.Clear();
     }
 
     private void OnCollisionEnter(Collision collision) {
         GameObject colGameObject = collision.gameObject;
-        if (colGameObject.tag == "Rock Piece" && colGameObject.transform.parent.GetComponent<RockController>() == null) {
+        Transform parent = colGameObject.transform.parent;
+        if (colGameObject.tag == "Rock Piece" && parent && parent.GetComponent<RockController>() == null) {
             touchingPieces.Add(colGameObject);
             colGameObject.GetComponent<RockPieceControler>().isPersistant = true;
         }

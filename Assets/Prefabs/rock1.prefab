@@ -5017,6 +5017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &761236801769774720
 GameObject:
   m_ObjectHideFlags: 0
@@ -10034,6 +10035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &1464593171944466069
 GameObject:
   m_ObjectHideFlags: 0
@@ -15051,6 +15053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &1549272062791344147
 GameObject:
   m_ObjectHideFlags: 0
@@ -20068,6 +20071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &1599971507615167316
 GameObject:
   m_ObjectHideFlags: 0
@@ -25085,6 +25089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &1654759702958100781
 GameObject:
   m_ObjectHideFlags: 0
@@ -30102,6 +30107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &1684903190895764272
 GameObject:
   m_ObjectHideFlags: 0
@@ -35119,6 +35125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &1957577138662424947
 GameObject:
   m_ObjectHideFlags: 0
@@ -40136,6 +40143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &3221155679799907127
 GameObject:
   m_ObjectHideFlags: 0
@@ -45153,6 +45161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &4169217977880454027
 GameObject:
   m_ObjectHideFlags: 0
@@ -50170,6 +50179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &4572646820345614484
 GameObject:
   m_ObjectHideFlags: 0
@@ -55187,6 +55197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &5031180068119868693
 GameObject:
   m_ObjectHideFlags: 0
@@ -60204,6 +60215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &6049373829818379760
 GameObject:
   m_ObjectHideFlags: 0
@@ -65221,6 +65233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &6084695137344498197
 GameObject:
   m_ObjectHideFlags: 0
@@ -70238,6 +70251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &6088589523775878319
 GameObject:
   m_ObjectHideFlags: 0
@@ -75255,6 +75269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &6099052029008616039
 GameObject:
   m_ObjectHideFlags: 0
@@ -80272,6 +80287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &6144496381035824173
 GameObject:
   m_ObjectHideFlags: 0
@@ -85289,6 +85305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &7120082794631282241
 GameObject:
   m_ObjectHideFlags: 0
@@ -90306,6 +90323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &7194476752761585673
 GameObject:
   m_ObjectHideFlags: 0
@@ -95323,6 +95341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &7384349983214071069
 GameObject:
   m_ObjectHideFlags: 0
@@ -100340,6 +100359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &7718947584527934234
 GameObject:
   m_ObjectHideFlags: 0
@@ -100354,7 +100374,7 @@ GameObject:
   - component: {fileID: 1682130620771213957}
   m_Layer: 0
   m_Name: rock1
-  m_TagString: Rock Piece
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105630,6 +105650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &9114783958581392786
 GameObject:
   m_ObjectHideFlags: 0
@@ -110647,6 +110668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!1 &9149591126035787753
 GameObject:
   m_ObjectHideFlags: 0
@@ -115664,3 +115686,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0

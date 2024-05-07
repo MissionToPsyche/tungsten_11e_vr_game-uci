@@ -7,16 +7,13 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
-    guid: 88f155ab1f36c8849a132a9a4c88c57b
+    guid: 6cbff866230c0714fa7d2e9ce93524dd
   - enabled: 1
     path: Assets/Scenes/BasicScene.unity
-    guid: 4e9fef26e6adb88479ad1b9834a32d94
-  - enabled: 1
-    path: Assets/Scenes/Jacob's Scene.unity
-    guid: 5da42fac84d566e4b95ad1032351237e
+    guid: bb18213c9a146ea40819f457db547bbf
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
-    guid: a706662573574cf48a5cfcb63a23ba4b
+    guid: 88f155ab1f36c8849a132a9a4c88c57b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
