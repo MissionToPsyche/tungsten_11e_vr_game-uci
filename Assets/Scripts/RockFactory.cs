@@ -17,9 +17,12 @@ public class RockFactory : MonoBehaviour
     public List<TargetChance> targetTypes;
     public GameObject rockPrefab;
     private GameObject rockInstance;
+    private bool cleaningUp = false;
 
     public void GenerateRock() {
-        rockInstance = Instantiate(rockPrefab, spawnPosition, Quaternion.identity);
+        CleanUp(true);
+        if (cleaningUp) return;
+        rockInstance = Instantiate(rockPrefab, spawnPosition, Quaternion.identity, transform);
         
         RockController rc = rockInstance.GetComponent<RockController>();
         double total = targetTypes.Sum(tc => tc.chance);
@@ -40,5 +43,31 @@ public class RockFactory : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void CleanUp(bool spawnNew) {
+        if (rockInstance && !cleaningUp) {
+            cleaningUp = true;
+            rockInstance.GetComponent<RockController>().Explode();
+            StartCoroutine(Decay(spawnNew));
+        }
+    }
+
+    IEnumerator Decay(bool spawnNew) {
+        for (int i = 0; i < 10; i++) {
+            foreach (Transform child in transform) {
+                RockPieceControler rpc = child.GetComponent<RockPieceControler>();
+                if (rpc && rpc.isPersistant) continue;
+                child.localScale *= 0.7f;
+            }
+            yield return new WaitForSeconds(.1f);
+        }
+        foreach (Transform child in transform) {
+            RockPieceControler rpc = child.GetComponent<RockPieceControler>();
+            if (rpc && rpc.isPersistant) continue;
+            Destroy(child.gameObject);
+        }
+        cleaningUp = false;
+        if (spawnNew) GenerateRock();
     }
 }

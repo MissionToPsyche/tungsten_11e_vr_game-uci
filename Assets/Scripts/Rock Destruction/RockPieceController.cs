@@ -6,6 +6,7 @@ public class RockPieceControler : MonoBehaviour
 {
     public RockType rockType;
     public List<GameObject> neighbors;
+    public bool isPersistant = false;
 
     private void Start()
     {

@@ -40,11 +40,11 @@ public class DeliveryArea : MonoBehaviour
         }
     }
 
-    // TODO: Fix parent transform when we move to generic breaking system.
     private void OnCollisionEnter(Collision collision) {
         GameObject colGameObject = collision.gameObject;
-        if (colGameObject.tag == "Rock Piece" && colGameObject.transform.parent == null) {
+        if (colGameObject.tag == "Rock Piece" && colGameObject.transform.parent.GetComponent<RockController>() == null) {
             touchingPieces.Add(colGameObject);
+            colGameObject.GetComponent<RockPieceControler>().isPersistant = true;
         }
     }
 
@@ -52,6 +52,7 @@ public class DeliveryArea : MonoBehaviour
         GameObject colGameObject = collision.gameObject;
         if (touchingPieces.Contains(colGameObject)) {
             touchingPieces.Remove(colGameObject);
+            colGameObject.GetComponent<RockPieceControler>().isPersistant = false;
         }
     }
 }

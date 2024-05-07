@@ -26,9 +26,23 @@ public class RockController : MonoBehaviour
             AudioSource audioSource = thisCollider.GetComponent<AudioSource>();
             audioSource.Play();
 
-            thisCollider.transform.parent = null;
+            thisCollider.transform.parent = transform.parent;
             thisCollider.gameObject.AddComponent<Rigidbody>();
             thisCollider.gameObject.AddComponent<XRGrabInteractable>();
         }
+    }
+
+    public void Explode() {
+        List<Transform> children = new List<Transform>();
+        foreach (Transform child in transform) {
+            children.Add(child);
+        }
+        children.ForEach(delegate (Transform child)
+        {
+            child.parent = transform.parent;
+            Rigidbody rb = child.gameObject.AddComponent<Rigidbody>();
+            rb.AddExplosionForce(10.0f, transform.position, 0.0f, 3.0f);
+        });
+        Destroy(gameObject);
     }
 }
