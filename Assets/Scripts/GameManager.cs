@@ -30,10 +30,10 @@ public class GameManager : MonoBehaviour
         // TODO: Replace with varying logic, maybe create a delivery class
         Dictionary<RockType, int> delivery = new Dictionary<RockType, int>();
 
-        foreach (var type in targetTypes) {
-            int randInd = Random.Range(0, 3);
-            if (randInd == 0) continue;
-            delivery.Add(type, randInd);
+        int numItems = Random.Range(1, 6);
+        for (int i = 0; i < numItems; i++) {
+            RockType type = targetTypes[Random.Range(0, targetTypes.Count)];
+            if (!delivery.TryAdd(type, 1)) delivery[type] += 1;
         }
 
         deliveries.Add(delivery);
