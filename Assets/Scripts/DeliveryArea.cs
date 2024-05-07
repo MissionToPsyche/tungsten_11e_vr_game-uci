@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using TMPro;
 
 [System.Serializable]
@@ -9,7 +10,8 @@ public class CollectEvent : UnityEvent<List<GameObject>> { }
 
 public class DeliveryArea : MonoBehaviour
 {
-    public TMP_Text screen;
+    public GameObject deliveryPanel;
+    public GameObject deliveryItemPrefab;
     public CollectEvent collectEvent;
     private List<GameObject> touchingPieces;
 
@@ -25,18 +27,21 @@ public class DeliveryArea : MonoBehaviour
     }
 
     public void setDelivery(Dictionary<RockType, int> delivery) {
-        screen.text = "";
+        clearDelivery();
         foreach (var item in delivery) {
             RockType key = item.Key;
             int val = item.Value;
-            screen.text += $"{key.typeName} - {val}\n";
+            Texture tex = key.material.GetTexture("_BaseMap");
+
+            GameObject windowItem = Instantiate(deliveryItemPrefab, deliveryPanel.transform);
+            windowItem.GetComponentInChildren<TMP_Text>().SetText($"{key.typeName} - {val}x");
+            windowItem.GetComponentInChildren<RawImage>().texture = tex;
         }
     }
 
     public void clearDelivery() {
-        screen.text = "";
-        foreach (var obj in touchingPieces) {
-            Destroy(obj);
+        foreach (Transform child in deliveryPanel.transform) {
+            Destroy(child.gameObject);
         }
     }
 
