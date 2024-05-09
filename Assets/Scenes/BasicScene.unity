@@ -3072,25 +3072,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1556ce4bf9cb74e8a3adda991b65c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTypes:
-  - {fileID: 11400000, guid: fb23507989dca544188239ce2e42c37d, type: 2}
-  - {fileID: 11400000, guid: 470de464c0204314b86c27fa7c091c43, type: 2}
-  - {fileID: 11400000, guid: d608c9487ccff544dab1122e67767b59, type: 2}
-  cdEvent:
+  deliveryAttributes:
+  - type: {fileID: 11400000, guid: fb23507989dca544188239ce2e42c37d, type: 2}
+    chance: 100
+    pointValue: 1
+  - type: {fileID: 11400000, guid: 470de464c0204314b86c27fa7c091c43, type: 2}
+    chance: 0
+    pointValue: 5
+  - type: {fileID: 11400000, guid: d608c9487ccff544dab1122e67767b59, type: 2}
+    chance: 0
+    pointValue: 10
+  CompleteDeliveryEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1620457560}
-        m_TargetAssemblyTypeName: PointWindow, Assembly-CSharp
-        m_MethodName: AddPoints
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1550312827}
         m_TargetAssemblyTypeName: DeliveryArea, Assembly-CSharp
         m_MethodName: clearDelivery
@@ -3103,7 +3097,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  gdEvent:
+      - m_Target: {fileID: 1620457560}
+        m_TargetAssemblyTypeName: PointWindow, Assembly-CSharp
+        m_MethodName: AddPoints
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  GenerateDeliveryEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1550312827}
@@ -3148,11 +3154,11 @@ MonoBehaviour:
   spawnPosition: {x: 0, y: 1, z: 1}
   targetTypes:
   - type: {fileID: 11400000, guid: fb23507989dca544188239ce2e42c37d, type: 2}
-    chance: 40
+    chance: 50
   - type: {fileID: 11400000, guid: 470de464c0204314b86c27fa7c091c43, type: 2}
-    chance: 20
+    chance: 40
   - type: {fileID: 11400000, guid: d608c9487ccff544dab1122e67767b59, type: 2}
-    chance: 10
+    chance: 30
   rockPrefab: {fileID: 7718947584527934234, guid: b427e624bc440b84ebcd784a14480093, type: 3}
 --- !u!1001 &1070358987
 PrefabInstance:
@@ -7808,7 +7814,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1064587409}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: DeliverySystem, Assembly-CSharp
         m_MethodName: VerifyDelivery
         m_Mode: 0
         m_Arguments:

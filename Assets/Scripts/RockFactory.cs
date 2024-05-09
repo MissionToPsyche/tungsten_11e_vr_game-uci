@@ -5,9 +5,8 @@ using System.Linq;
 
 [System.Serializable]
 public struct TargetChance {
-    [SerializeField]
     public RockType type;
-    [SerializeField]
+    [Min(0)]
     public int chance;
 }
 
@@ -29,8 +28,7 @@ public class RockFactory : MonoBehaviour
         foreach (RockPieceControler rpc in rc.targetPieces) {
             // Modified from https://stackoverflow.com/questions/46563490/c-sharp-weighted-random-numbers
             // Sums then subtracts from each value until we reach 0, then we've made our choice.
-            double totalCopy = total;
-            double numericValue = Random.value * totalCopy;
+            double numericValue = Random.value * total;
 
             foreach (var item in targetTypes)
             {

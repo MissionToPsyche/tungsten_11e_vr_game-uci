@@ -20,15 +20,12 @@ public class DeliveryArea : MonoBehaviour
     }
 
     public void collectPieces() {
-        foreach (var item in touchingPieces) {
-            print(item);
-        }
         collectEvent.Invoke(touchingPieces);
     }
 
-    public void setDelivery(Dictionary<RockType, int> delivery) {
+    public void setDelivery(Delivery delivery) {
         clearDelivery();
-        foreach (var item in delivery) {
+        foreach (var item in delivery.manifest) {
             RockType key = item.Key;
             int val = item.Value;
             Texture tex = key.material.GetTexture("_BaseMap");
@@ -58,6 +55,7 @@ public class DeliveryArea : MonoBehaviour
         }
     }
 
+    // What happens if we destroy before exiting?
     private void OnCollisionExit(Collision collision) {
         GameObject colGameObject = collision.gameObject;
         if (touchingPieces.Contains(colGameObject)) {
