@@ -3153,12 +3153,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPosition: {x: 0, y: 1, z: 1}
   targetTypes:
+  - type: {fileID: 11400000, guid: 76941443fefc189489a50578ee3995ff, type: 2}
+    chance: 75
   - type: {fileID: 11400000, guid: fb23507989dca544188239ce2e42c37d, type: 2}
-    chance: 50
+    chance: 10
   - type: {fileID: 11400000, guid: 470de464c0204314b86c27fa7c091c43, type: 2}
-    chance: 40
+    chance: 7
   - type: {fileID: 11400000, guid: d608c9487ccff544dab1122e67767b59, type: 2}
-    chance: 30
+    chance: 3
   rockPrefab: {fileID: 7718947584527934234, guid: b427e624bc440b84ebcd784a14480093, type: 3}
 --- !u!1001 &1070358987
 PrefabInstance:
