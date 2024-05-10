@@ -51,7 +51,7 @@ public class DeliveryArea : MonoBehaviour
         Transform parent = colGameObject.transform.parent;
         if (colGameObject.tag == "Rock Piece" && parent && parent.GetComponent<RockController>() == null) {
             touchingPieces.Add(colGameObject);
-            colGameObject.GetComponent<RockPieceControler>().isPersistant = true;
+            //colGameObject.GetComponent<RockPieceControler>().isPersistant = true;
         }
     }
 
@@ -60,7 +60,7 @@ public class DeliveryArea : MonoBehaviour
         GameObject colGameObject = collision.gameObject;
         if (touchingPieces.Contains(colGameObject)) {
             touchingPieces.Remove(colGameObject);
-            colGameObject.GetComponent<RockPieceControler>().isPersistant = false;
+            //colGameObject.GetComponent<RockPieceControler>().isPersistant = false;
         }
     }
 }

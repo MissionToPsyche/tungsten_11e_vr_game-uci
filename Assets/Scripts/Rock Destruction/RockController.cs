@@ -29,6 +29,11 @@ public class RockController : MonoBehaviour
             thisCollider.transform.parent = transform.parent;
             thisCollider.gameObject.AddComponent<Rigidbody>();
             thisCollider.gameObject.AddComponent<XRGrabInteractable>();
+
+            RockPieceControler rpc = thisCollider.gameObject.GetComponent<RockPieceControler>();
+            if (targetPieces.Contains(rpc)) {
+                rpc.isPersistant = true;
+            }
         }
     }
 
