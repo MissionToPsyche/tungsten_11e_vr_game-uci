@@ -10,36 +10,38 @@ public class CollectEvent : UnityEvent<List<GameObject>> { }
 
 public class DeliveryArea : MonoBehaviour
 {
-    public GameObject deliveryPanel;
+    public GameObject deliveryCanvas;
     public GameObject deliveryItemPrefab;
+    public GameObject deliveryPanelPrefab;
+
     public CollectEvent collectEvent;
+
     private List<GameObject> touchingPieces;
 
     private void Awake() {
         touchingPieces = new List<GameObject>();
     }
 
-    public void collectPieces() {
+    public void CollectPieces() {
         collectEvent.Invoke(touchingPieces);
     }
 
-    public void setDelivery(Delivery delivery) {
-        clearDelivery();
-        foreach (var item in delivery.manifest) {
-            RockType key = item.Key;
-            int val = item.Value;
-            Texture tex = key.material.GetTexture("_BaseMap");
-
-            GameObject windowItem = Instantiate(deliveryItemPrefab, deliveryPanel.transform);
-            windowItem.GetComponentInChildren<TMP_Text>().SetText($"{key.typeName} - {val}x");
-            windowItem.GetComponentInChildren<RawImage>().texture = tex;
+    public void AddDelivery(Delivery delivery) {
+        GameObject windowPanel = Instantiate(deliveryPanelPrefab, deliveryCanvas.transform);
+        windowPanel.GetComponent<DeliveryPanel>().SetDelivery(delivery, deliveryItemPrefab);
+    }
+    
+    public void RemoveDelivery(Delivery delivery) {
+        foreach (Transform child in deliveryCanvas.transform) {
+            DeliveryPanel dp = child.GetComponent<DeliveryPanel>();
+            if (dp && dp.delivery == delivery) {
+                Destroy(child.gameObject);
+                break;
+            }
         }
     }
 
-    public void clearDelivery() {
-        foreach (Transform child in deliveryPanel.transform) {
-            Destroy(child.gameObject);
-        }
+    public void ClearDeliveryArea() {
         foreach (GameObject obj in touchingPieces) {
             Destroy(obj);
         }

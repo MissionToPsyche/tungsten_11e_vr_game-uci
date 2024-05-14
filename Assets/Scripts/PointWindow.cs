@@ -5,7 +5,7 @@ using TMPro;
 
 public class PointWindow : MonoBehaviour
 {
-    public TMP_Text point;
+    private TMP_Text point;
     private int points = 0;
 
     private void Start()
@@ -13,8 +13,8 @@ public class PointWindow : MonoBehaviour
         if (!point) point = GetComponent<TMP_Text>();
     }
 
-    public void AddPoints(int points) {
-        this.points += points;
+    public void AddPoints(Delivery delivery) {
+        this.points += delivery.points;
         point.SetText("Points: " + this.points);
     }
 }

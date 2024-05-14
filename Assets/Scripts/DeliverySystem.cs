@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using System.Linq;
 
 [System.Serializable]
-public class CompleteDeliveryEvent : UnityEvent<int> { }
+public class CompleteDeliveryEvent : UnityEvent<Delivery> { }
 
 [System.Serializable]
 public class GenerateDeliveryEvent : UnityEvent<Delivery> { }
@@ -59,6 +59,7 @@ public class DeliverySystem : MonoBehaviour
     private void Start()
     {
         GenerateDelivery();
+        GenerateDelivery();
     }
 
     /// <summary>
@@ -68,7 +69,7 @@ public class DeliverySystem : MonoBehaviour
     public void GenerateDelivery(int numItems = 0) {
         Dictionary<RockType, int> manifest = new Dictionary<RockType, int>();
 
-        if (numItems <= 0) numItems = Random.Range(1, 6);
+        if (numItems <= 0) numItems = Random.Range(1, 4);
 
         int pointTotal = 0;
         for (int i = 0; i < numItems; i++) {
@@ -91,7 +92,7 @@ public class DeliverySystem : MonoBehaviour
         var sortedDeliveries = deliveries.OrderByDescending(delivery => delivery.points);
         var delivery = sortedDeliveries.FirstOrDefault(delivery => delivery.CanComplete(collectedObjs));
         if (delivery != null) {
-            CompleteDeliveryEvent.Invoke(delivery.points);
+            CompleteDeliveryEvent.Invoke(delivery);
             deliveries.Remove(delivery);
         }
     }
