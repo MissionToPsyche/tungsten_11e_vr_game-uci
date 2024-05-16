@@ -8,6 +8,6 @@ public class Respawn : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        collision.transform.position = new Vector3(0, 0, 0);   
+        collision.transform.position = new Vector3(0, 1, 0);   
     }
 }
