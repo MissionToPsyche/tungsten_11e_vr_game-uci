@@ -94,6 +94,7 @@ public class DeliverySystem : MonoBehaviour
         if (delivery != null) {
             CompleteDeliveryEvent.Invoke(delivery);
             deliveries.Remove(delivery);
+            GenerateDelivery();
         }
     }
 

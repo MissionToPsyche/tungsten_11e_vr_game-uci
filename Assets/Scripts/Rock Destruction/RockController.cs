@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class RockPieceBrokenEvent : UnityEvent { }
 
 public class RockController : MonoBehaviour
 {
     public List<RockPieceControler> basePieces;
     public List<RockPieceControler> targetPieces;
+    public RockPieceBrokenEvent RockPieceBroken;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -29,6 +34,8 @@ public class RockController : MonoBehaviour
             thisCollider.transform.parent = transform.parent;
             thisCollider.gameObject.AddComponent<Rigidbody>();
             thisCollider.gameObject.AddComponent<XRGrabInteractable>();
+
+            RockPieceBroken.Invoke();
         }
     }
 

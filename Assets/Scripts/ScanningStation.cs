@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
+
+[System.Serializable]
+public class ScanEvent : UnityEvent { }
 
 public class ScanningStation : MonoBehaviour
 {
     private GameObject currentObj = null;
     public TMP_Text screen;
     public RawImage image;
+    public ScanEvent ScanEvent;
 
     private void Start() {
         screen.SetText("Scanned Nothing");
@@ -27,6 +32,7 @@ public class ScanningStation : MonoBehaviour
         image.enabled = true;
         image.texture = rt.material.GetTexture("_BaseMap");
         image.color = Color.white;
+        ScanEvent.Invoke();
     }
     private void OnTriggerEnter(Collider other)
     {
