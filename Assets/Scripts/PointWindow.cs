@@ -13,6 +13,11 @@ public class PointWindow : MonoBehaviour
         if (!point) point = GetComponent<TMP_Text>();
     }
 
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
+
     public void AddPoints(int points) {
         this.points += points;
         point.SetText("Points: " + this.points);
