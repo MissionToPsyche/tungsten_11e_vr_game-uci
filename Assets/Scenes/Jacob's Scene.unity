@@ -5696,6 +5696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &87091400
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11110,6 +11111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &128327719
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16146,6 +16148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &223721406
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21361,6 +21364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &352107324
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26420,6 +26424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &365637694
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -31476,6 +31481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &378272898
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36485,6 +36491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &420826035
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41604,6 +41611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &507662892
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41873,10 +41881,6 @@ MonoBehaviour:
   - {fileID: 1285978399}
   - {fileID: 1501772440}
   - {fileID: 223721402}
-  rt:
-  - {fileID: 11400000, guid: fb23507989dca544188239ce2e42c37d, type: 2}
-  - {fileID: 11400000, guid: 470de464c0204314b86c27fa7c091c43, type: 2}
-  - {fileID: 11400000, guid: d608c9487ccff544dab1122e67767b59, type: 2}
 --- !u!54 &551641763
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41904,6 +41908,111 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &556551570
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3900848510602004425, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099055877311713858, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397457279475779982, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      propertyPath: m_Name
+      value: Score To Beat (TMP)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6757652425265480780, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6397457279475779982, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
 --- !u!1 &563931292 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6397457279475779982, guid: ab7d96d6d29e89f44bcd19faffe5bc53, type: 3}
@@ -41922,7 +42031,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 5
-  time_remaining: {fileID: 0}
 --- !u!1 &578618665 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9014170783809206332, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
@@ -46941,6 +47049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &637687774
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -52000,6 +52109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &684853066
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56934,6 +57044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &764950119
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61868,6 +61979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &919325645
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -61952,6 +62064,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1556ce4bf9cb74e8a3adda991b65c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTypes: []
+  cdEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  gdEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1064587410
 Transform:
   m_ObjectHideFlags: 0
@@ -67247,6 +67366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &1194405182
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -67389,6 +67509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screen: {fileID: 1847728721}
+  image: {fileID: 0}
   maxDistance: 10
 --- !u!65 &1210883555
 BoxCollider:
@@ -72323,6 +72444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &1285978403
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -77323,6 +77445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &1347724686
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -82318,6 +82441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &1473689098
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -87283,6 +87407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &1501772444
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -92987,6 +93112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &1744430669
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -97974,6 +98100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &1821934374
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -103154,6 +103281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &1864590881
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -108509,6 +108637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &2025293630
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -113589,6 +113718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &2060271517
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -118523,6 +118653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockType: {fileID: 0}
   neighbors: []
+  isPersistant: 0
 --- !u!64 &2080499656
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -118610,3 +118741,4 @@ SceneRoots:
   - {fileID: 1620457559}
   - {fileID: 1327478470}
   - {fileID: 1932014373}
+  - {fileID: 556551570}

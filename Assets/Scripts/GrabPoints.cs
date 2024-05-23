@@ -11,6 +11,6 @@ public class GrabPoints : MonoBehaviour
     {
         if (!grabpoints) grabpoints = GetComponent<TMP_Text>();
 
-        grabpoints.SetText(PlayerPrefs.GetInt("HighScore", 0).ToString());
+        grabpoints.SetText("Points: " + PlayerPrefs.GetInt("HighScore", 0).ToString());
     }
 }
