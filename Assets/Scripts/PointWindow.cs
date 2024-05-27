@@ -16,5 +16,10 @@ public class PointWindow : MonoBehaviour
     public void AddPoints(Delivery delivery) {
         this.points += delivery.points;
         point.SetText("Points: " + this.points);
+
+        if (this.points > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", this.points);
+        }
     }
 }
