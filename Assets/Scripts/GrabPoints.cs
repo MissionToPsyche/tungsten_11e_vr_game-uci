@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// DEPRECATED
 public class GrabPoints : MonoBehaviour
 {
     public TMP_Text grabpoints;

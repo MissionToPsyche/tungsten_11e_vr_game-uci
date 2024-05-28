@@ -11,15 +11,13 @@ public class PointWindow : MonoBehaviour
     private void Start()
     {
         if (!point) point = GetComponent<TMP_Text>();
+        PlayerPrefs.SetInt("Score", points);
     }
 
     public void AddPoints(Delivery delivery) {
         this.points += delivery.points;
         point.SetText("Points: " + this.points);
 
-        if (this.points > PlayerPrefs.GetInt("HighScore", 0))
-        {
-            PlayerPrefs.SetInt("HighScore", this.points);
-        }
+        PlayerPrefs.SetInt("Score", this.points);
     }
 }
