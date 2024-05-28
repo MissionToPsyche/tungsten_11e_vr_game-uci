@@ -36,6 +36,10 @@ public class RockController : MonoBehaviour
             thisCollider.gameObject.AddComponent<XRGrabInteractable>();
 
             RockPieceBroken.Invoke();
+            RockPieceControler rpc = thisCollider.gameObject.GetComponent<RockPieceControler>();
+            if (targetPieces.Contains(rpc)) {
+                rpc.isPersistant = true;
+            }
         }
     }
 
