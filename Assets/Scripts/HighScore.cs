@@ -17,8 +17,8 @@ public class HighScore : MonoBehaviour
             res += "New Highscore!\n";
             PlayerPrefs.SetInt("Highscore", score);
         }
-        res += $"Score: {score}";
-        res += $"Highscore: {highscore}";
+        res += $"Score: {score}\n";
+        res += $"Highscore: {highscore}\n";
         text.SetText(res);
     }
 }

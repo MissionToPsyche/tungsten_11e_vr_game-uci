@@ -12,7 +12,7 @@ public class ScoreToBeat : MonoBehaviour
     void Start()
     {
         if (!score_to_beat) score_to_beat = GetComponent<TMP_Text>();
-        score_to_beat.SetText("Score To Beat: " + PlayerPrefs.GetInt("HighScore", 0).ToString());
+        score_to_beat.SetText("Score To Beat: " + PlayerPrefs.GetInt("Highscore", 0).ToString());
     }
 
 }
