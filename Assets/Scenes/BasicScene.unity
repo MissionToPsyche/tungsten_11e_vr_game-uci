@@ -2296,8 +2296,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9168142743249570444, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
-      propertyPath: m_UseGravity
+      propertyPath: m_EnableFly
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168142743249570444, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -11523,6 +11527,7 @@ GameObject:
   - component: {fileID: 8319826106926392790}
   - component: {fileID: 6595424585408778504}
   - component: {fileID: 8319826106926392791}
+  - component: {fileID: 8319826106926392792}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -11551,6 +11556,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
+--- !u!135 &8319826106926392792
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8274442781306981535}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.009000004
+  m_Center: {x: 0.0000000037252903, y: 0, z: 0}
 --- !u!1 &8430030325409466367
 GameObject:
   m_ObjectHideFlags: 0
