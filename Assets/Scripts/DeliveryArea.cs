@@ -14,6 +14,9 @@ public class DeliveryArea : MonoBehaviour
     public GameObject deliveryItemPrefab;
     public GameObject deliveryPanelPrefab;
 
+    public Pipe pipe;
+
+    // TODO: Add coupling with game manager.
     public CollectEvent collectEvent;
 
     private List<GameObject> touchingPieces;
@@ -42,9 +45,7 @@ public class DeliveryArea : MonoBehaviour
     }
 
     public void ClearDeliveryArea() {
-        foreach (GameObject obj in touchingPieces) {
-            Destroy(obj);
-        }
+        pipe.CollectIntoPipe(touchingPieces);
         touchingPieces.Clear();
     }
 
