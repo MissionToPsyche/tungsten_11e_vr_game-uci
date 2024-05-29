@@ -3688,11 +3688,11 @@ MonoBehaviour:
   spawnPosition: {x: 0, y: 1, z: 1}
   targetTypes:
   - type: {fileID: 11400000, guid: fb23507989dca544188239ce2e42c37d, type: 2}
-    chance: 50
+    chance: 100
   - type: {fileID: 11400000, guid: 470de464c0204314b86c27fa7c091c43, type: 2}
-    chance: 40
+    chance: 0
   - type: {fileID: 11400000, guid: d608c9487ccff544dab1122e67767b59, type: 2}
-    chance: 30
+    chance: 0
   rockPrefab: {fileID: 7718947584527934234, guid: b427e624bc440b84ebcd784a14480093, type: 3}
 --- !u!64 &1120657802
 MeshCollider:
@@ -10146,7 +10146,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 165069833998679351, guid: 7d628092b965b7e4db3a9fe2a2e9f222, type: 3}
       propertyPath: time
-      value: 80
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2825402575244155402, guid: 7d628092b965b7e4db3a9fe2a2e9f222, type: 3}
       propertyPath: m_fontAsset
