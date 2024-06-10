@@ -16,9 +16,6 @@ public class DestroyObject : MonoBehaviour
         if (collision.gameObject.tag == "Rock Piece" && collision.GetContact(0).thisCollider.name == "Floor")
         {
             RockPieceControler rpc = collision.gameObject.GetComponent<RockPieceControler>();
-            if (rpc && rpc.rockType) {
-                pointEvent.Invoke(rpc.rockType.pointValue);
-            }
             Destroy(collision.gameObject);
         }
     }
