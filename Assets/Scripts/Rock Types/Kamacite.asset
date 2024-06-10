@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Kamacite
   m_EditorClassIdentifier: 
   typeName: Kamacite
-  material: {fileID: 2100000, guid: e8bae6357d8faca48b82a4ee6b9fb01e, type: 2}
+  material: {fileID: 3986188387995331715, guid: b82decdb3d146dd40876a3d949f9941f, type: 3}

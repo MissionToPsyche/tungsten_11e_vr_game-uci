@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Iron Sulfide
   m_EditorClassIdentifier: 
   typeName: Iron Sulfide
-  material: {fileID: 2100000, guid: e4668c985a705904d97917549f1c62b9, type: 2}
+  material: {fileID: 2100000, guid: e1bf28b2fadf94043bb3b00bd100b7bb, type: 2}

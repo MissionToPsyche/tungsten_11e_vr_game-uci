@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Enstatite
   m_EditorClassIdentifier: 
   typeName: Enstatite
-  material: {fileID: 2100000, guid: e71e300104ed4924fa88bc330d300842, type: 2}
+  material: {fileID: 2100000, guid: 4e744fae44c3ff945bc0c9d43afab9e1, type: 2}
