@@ -29,7 +29,7 @@ public class RockPieceControler : MonoBehaviour
         var collider = GetComponent<MeshCollider>();
         foreach (Transform child in transform.parent)
         {
-            if (child == this.transform) continue;
+            if (child == transform || neighbors.Contains(child.gameObject)) continue;
             var otherCollider = child.GetComponent<MeshCollider>();
 
             Vector3 otherPosition = otherCollider.transform.position;
@@ -39,7 +39,11 @@ public class RockPieceControler : MonoBehaviour
                 collider, transform.position, transform.rotation,
                 otherCollider, otherPosition, otherRotation,
                 out _, out _
-                )) neighbors.Add(child.gameObject);
+                ))
+            {
+                neighbors.Add(child.gameObject);
+                child.gameObject.GetComponent<RockPieceControler>().neighbors.Add(gameObject);
+            }
         }
         transform.localScale = startScale;
     }

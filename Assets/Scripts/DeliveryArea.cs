@@ -49,8 +49,8 @@ public class DeliveryArea : MonoBehaviour
         touchingPieces.Clear();
     }
 
-    private void OnCollisionEnter(Collision collision) {
-        GameObject colGameObject = collision.gameObject;
+    private void OnTriggerEnter(Collider collider) {
+        GameObject colGameObject = collider.gameObject;
         Transform parent = colGameObject.transform.parent;
         if (colGameObject.tag == "Rock Piece" && parent && parent.GetComponent<RockController>() == null) {
             touchingPieces.Add(colGameObject);
@@ -59,8 +59,8 @@ public class DeliveryArea : MonoBehaviour
     }
 
     // What happens if we destroy before exiting?
-    private void OnCollisionExit(Collision collision) {
-        GameObject colGameObject = collision.gameObject;
+    private void OnTriggerExit(Collider collider) {
+        GameObject colGameObject = collider.gameObject;
         if (touchingPieces.Contains(colGameObject)) {
             touchingPieces.Remove(colGameObject);
             //colGameObject.GetComponent<RockPieceControler>().isPersistant = false;

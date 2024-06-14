@@ -13,6 +13,7 @@ public struct TargetChance {
 public class RockFactory : MonoBehaviour
 {
     public Vector3 spawnPosition;
+    public RockType baseType;
     public List<TargetChance> targetTypes;
     public GameObject rockPrefab;
     private GameObject rockInstance;
@@ -41,6 +42,8 @@ public class RockFactory : MonoBehaviour
                 break;
             }
         }
+
+        foreach (RockPieceControler rpc in rc.basePieces) rpc.SetRockType(baseType);
     }
 
     public void CleanUp(bool spawnNew) {

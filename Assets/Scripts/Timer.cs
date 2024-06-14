@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
+        if (!PersistentSettings.timer) Destroy(this.gameObject);
         if (!time_remaining) time_remaining = GetComponent<TMP_Text>();
     }
 
