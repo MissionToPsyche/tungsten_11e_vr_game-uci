@@ -1,5 +1,5 @@
 # Asteroid Breaker
-## Created by Outer Reality for UCI Capstone IN4MATX 191
+**Created by Outer Reality for UCI Capstone IN4MATX 191**
 Outer Reality Team Members:
 * Lee Austin Uy
 * Sebin Im
