@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Pipe : MonoBehaviour
 {
@@ -42,6 +43,11 @@ public class Pipe : MonoBehaviour
         if (isReady)
         {
             isReady = false;
+            // Make ungrabbable
+            foreach (GameObject obj in objs)
+            {
+                Destroy(obj.GetComponent<XRGrabInteractable>());
+            }
             objects = new List<GameObject>(objs);
             pipeMovement.Extend();
         }

@@ -444,6 +444,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 602929987230897867, guid: 82b76e2dbe366b54dafc1b2043c65f59, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 602929987230897867, guid: 82b76e2dbe366b54dafc1b2043c65f59, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -494,6 +498,10 @@ PrefabInstance:
     - target: {fileID: 602929987230897867, guid: 82b76e2dbe366b54dafc1b2043c65f59, type: 3}
       propertyPath: onRelease.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773929352948924874, guid: 82b76e2dbe366b54dafc1b2043c65f59, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5501018801989375058, guid: 82b76e2dbe366b54dafc1b2043c65f59, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1137,6 +1145,11 @@ Transform:
   - {fileID: 1097591198}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &834510710 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 1773929352948924874, guid: 82b76e2dbe366b54dafc1b2043c65f59, type: 3}
+  m_PrefabInstance: {fileID: 336115701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &954725492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPosition: {x: 0, y: 1, z: 1}
+  baseType: {fileID: 0}
   targetTypes:
   - type: {fileID: 11400000, guid: fb23507989dca544188239ce2e42c37d, type: 2}
     chance: 10
@@ -1490,6 +1504,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialSystem: {fileID: 747369938}
+  frameEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  frameExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   objectOutline: {fileID: 280919401}
 --- !u!4 &1097591198
 Transform:
@@ -1716,18 +1736,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2079537172}
     - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 834510710}
+    - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
@@ -1735,11 +1767,27 @@ PrefabInstance:
       value: Next
       objectReference: {fileID: 0}
     - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Frame, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Collider, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
       propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 268225530990455763, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
+      propertyPath: m_FirstSelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2492938191193049259, guid: 25e7604f9f8194844805d93f270fff61, type: 3}
@@ -5522,6 +5570,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialSystem: {fileID: 747369938}
+  frameEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 834510710}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  frameExitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 834510710}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   objectOutline: {fileID: 0}
   rockName: rock1(Clone)
 --- !u!4 &1572498858
@@ -6055,6 +6133,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialSystem: {fileID: 747369938}
+  frameEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  frameExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   objectOutline: {fileID: 336115703}
 --- !u!1001 &1857546040
 PrefabInstance:
@@ -6151,6 +6235,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialSystem: {fileID: 747369938}
+  frameEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  frameExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   objectOutline: {fileID: 3297088809753162583}
 --- !u!4 &1875506173
 Transform:
@@ -6320,6 +6410,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialSystem: {fileID: 747369938}
+  frameEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  frameExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
   objectOutline: {fileID: 1379388460}
 --- !u!1 &2142464592
 GameObject:
@@ -7000,7 +7096,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: -0.082, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.587558}
+  m_LocalScale: {x: 1, y: 0.6810033, z: 0.587558}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2518804256747634844}
@@ -7754,7 +7850,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

@@ -10,11 +10,13 @@ public class HighlightFrame : Frame
         if (objectOutline != null) {
             objectOutline.enabled = true;
         }
+        base.Enter();
     }
 
     public override void Exit() {
         if (objectOutline != null) {
             objectOutline.enabled = false;
         }
+        base.Exit();
     }
 }
