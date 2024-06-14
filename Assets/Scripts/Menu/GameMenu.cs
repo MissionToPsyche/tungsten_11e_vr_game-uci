@@ -10,9 +10,9 @@ public class GameMenu : MonoBehaviour
         transform.position = offset;
     }
 
-    public void GoToMainMenu()
+    public void Exit()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Game Over");
     }
     public void ReloadScene()
     {
